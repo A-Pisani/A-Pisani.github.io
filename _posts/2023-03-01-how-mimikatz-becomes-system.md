@@ -5,7 +5,7 @@ categories: "Windows"
 tags: ["Research", "Pentesting", "Privilege Escalation", "Access Token"]
 ---
 
-In this post I would like to spot a shine on a pretty overlooked feature of [Mimikatz](https://github.com/gentilkiwi/mimikatz).
+In this post I would like to shine a spotlight on a pretty overlooked feature of [Mimikatz](https://github.com/gentilkiwi/mimikatz).
 
 Mimikatz facilitates password hash extraction from the [Local Security Authority Subsystem (LSASS)](https://en.wikipedia.org/wiki/Local_Security_Authority_Subsystem_Service). Since LSASS is a privileged process running under the `SYSTEM` user, we must launch mimikatz from an administrative command prompt. To extract password hashes, we must first execute two commands. The first is `privilege::debug`, which enables the `SeDebugPrivilge` access right required to tamper with another process. If this commands fails, mimikatz was most likely not executed with administrative privileges.
 
